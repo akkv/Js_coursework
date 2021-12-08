@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.addNewTaskArea,
+.taskListArea {
+    padding: 0 calc(50vw - 400px);
+    font-family: sans-serif;
+    color: #263238;
+    font-size: small;
+    text-align: center;
+}
+.bold {
+    font-weight: 700;
+}
+.taskListArea h1,
+.addNewTaskArea h1,
+.okMessage {
+    text-transform: uppercase;
+}
+.link {
+    margin-top: 10px;
+    order: 1;
+}
+/* index */
+.inputTitle {
+    font-weight: 700;
+}
+form[name='addTaskForm'] {
+    text-align: center;
+}
+form[name='addTaskForm'] label,
+.addMemberButton {
+    margin-bottom: 5px;
+}
+form[name='addTaskForm'] label:last-of-type {
+    margin-bottom: 20px;
+}
+.addMemberButton,
+input[name='submit'] {
+    width: 100%;
+}
+.membersArea {
+    justify-content: center;
+}
+.membersArea input[name='member'] {
+    width: 80%;
+}
+.membersArea div {
+    margin-bottom: 5px;
+}
+.deleteMember {
+    margin-left: -5px;
+}
+.message {
+    order: 1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    color: #63dd1700;
+    opacity: 1;
+}
+.message-ok,
+.message-error {
+    opacity: 0;
+    transition: opacity 3s;
+}
+.message-ok {
+    color: #63dd17;
+}
+.message-error {
+    color: #dd2c00;
+}
+input[name='title'],
+input[name='member'],
+textarea[name='description'],
+input[name='date'] {
+    outline-color: #63dd17;
+}
+form[name='addTaskForm'] .invalid {
+    outline-color: #dd2c00;
+}
+/* tasks */
+.task {
+    text-align: left;
+    background-color: #cfd8dc;
+    padding: 0 15px 15px;
+}
+.task:last-child {
+    margin-bottom: 10px;
+}
+.task:nth-child(even) {
+    background-color: #90a4ae;
+}
+.taskListArea .activeTask {
+    background-color: #ff5722;
+}
+.deleteButton {
+    order: 1;
+}

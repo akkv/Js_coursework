@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Новая задача</title>
+    </head>
+    <body>
+        <section class="addNewTaskArea flex-column">
+            <h1>Добавление задачи</h1>
+            <form action="post" name="addTaskForm">
+                <label class="flex-row">
+                    <span class="inputTitle col-3">Название задачи:*</span>
+                    <input
+                        class="col-9 invalid"
+                        type="text"
+                        name="title"
+                        required
+                        minlength="3"
+                        required
+                    />
+                </label>
+                <label class="flex-row">
+                    <span class="inputTitle col-3">Описание задачи:*</span>
+                    <textarea
+                        class="col-9 invalid"
+                        name="description"
+                        id=""
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                </label>
+                <label class="flex-row">
+                    <span class="inputTitle col-3">Срок выполнения задачи:</span>
+                    <input class="col-9" type="date" name="date" id="" />
+                </label>
+                <button class="addMemberButton">Добавить участника</button>
+                <div class="membersArea flex-row wrap"></div>
+                <input type="submit" value="Добавить задачу" name="submit" disabled />
+            </form>
+            <a class="link" href="tasks.html">Список задач</a>
+            <div class="message"></div>
+        </section>
+        <script type="module" src="/js/script.js"></script>
+    </body>
+</html>
